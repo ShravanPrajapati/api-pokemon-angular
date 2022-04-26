@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h2 class="text-center">Pokemon List Api</h2>
+  <div class="text-center">
+    <input type="search" value="Search" /><button class="btn btn-primary">
+      Search
+    </button>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Pokemon Name</th>
+        <th>Pokemon Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemons">
+        <td>{{ pokemon.name }}</td>
+        <td>
+          <a [href]="pokemon.url"
+            ><span>{{ pokemon.url }}</span></a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
